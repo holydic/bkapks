@@ -1,0 +1,208 @@
+.class public Landroidx/constraintlayout/widget/e$d;
+.super Ljava/lang/Object;
+.source "ConstraintSet.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/constraintlayout/widget/e;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "d"
+.end annotation
+
+
+# instance fields
+.field public a:Z
+
+.field public b:I
+
+.field public c:I
+
+.field public d:F
+
+.field public e:F
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    .line 2
+    iput-boolean v0, p0, Landroidx/constraintlayout/widget/e$d;->a:Z
+
+    .line 3
+    iput v0, p0, Landroidx/constraintlayout/widget/e$d;->b:I
+
+    .line 4
+    iput v0, p0, Landroidx/constraintlayout/widget/e$d;->c:I
+
+    const/high16 v0, 0x3f80
+
+    .line 5
+    iput v0, p0, Landroidx/constraintlayout/widget/e$d;->d:F
+
+    const/high16 v0, 0x7fc0
+
+    .line 6
+    iput v0, p0, Landroidx/constraintlayout/widget/e$d;->e:F
+
+    return-void
+.end method
+
+
+# virtual methods
+.method a(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 3
+    .parameter
+    .parameter
+
+    .line 5
+    sget-object v0, Landroidx/constraintlayout/widget/j;->PropertySet:[I
+
+    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    const/4 p2, 0x1
+
+    .line 6
+    iput-boolean p2, p0, Landroidx/constraintlayout/widget/e$d;->a:Z
+
+    .line 7
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->getIndexCount()I
+
+    move-result p2
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p2, :cond_4
+
+    .line 8
+    invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getIndex(I)I
+
+    move-result v1
+
+    .line 9
+    sget v2, Landroidx/constraintlayout/widget/j;->PropertySet_android_alpha:I
+
+    if-ne v1, v2, :cond_0
+
+    .line 10
+    iget v2, p0, Landroidx/constraintlayout/widget/e$d;->d:F
+
+    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v1
+
+    iput v1, p0, Landroidx/constraintlayout/widget/e$d;->d:F
+
+    goto :goto_1
+
+    .line 11
+    :cond_0
+    sget v2, Landroidx/constraintlayout/widget/j;->PropertySet_android_visibility:I
+
+    if-ne v1, v2, :cond_1
+
+    .line 12
+    iget v2, p0, Landroidx/constraintlayout/widget/e$d;->b:I
+
+    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v1
+
+    iput v1, p0, Landroidx/constraintlayout/widget/e$d;->b:I
+
+    .line 13
+    invoke-static {}, Landroidx/constraintlayout/widget/e;->a()[I
+
+    move-result-object v1
+
+    iget v2, p0, Landroidx/constraintlayout/widget/e$d;->b:I
+
+    aget v1, v1, v2
+
+    iput v1, p0, Landroidx/constraintlayout/widget/e$d;->b:I
+
+    goto :goto_1
+
+    .line 14
+    :cond_1
+    sget v2, Landroidx/constraintlayout/widget/j;->PropertySet_visibilityMode:I
+
+    if-ne v1, v2, :cond_2
+
+    .line 15
+    iget v2, p0, Landroidx/constraintlayout/widget/e$d;->c:I
+
+    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v1
+
+    iput v1, p0, Landroidx/constraintlayout/widget/e$d;->c:I
+
+    goto :goto_1
+
+    .line 16
+    :cond_2
+    sget v2, Landroidx/constraintlayout/widget/j;->PropertySet_motionProgress:I
+
+    if-ne v1, v2, :cond_3
+
+    .line 17
+    iget v2, p0, Landroidx/constraintlayout/widget/e$d;->e:F
+
+    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v1
+
+    iput v1, p0, Landroidx/constraintlayout/widget/e$d;->e:F
+
+    :cond_3
+    :goto_1
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 18
+    :cond_4
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    return-void
+.end method
+
+.method public a(Landroidx/constraintlayout/widget/e$d;)V
+    .locals 1
+    .parameter
+
+    .line 1
+    iget-boolean v0, p1, Landroidx/constraintlayout/widget/e$d;->a:Z
+
+    iput-boolean v0, p0, Landroidx/constraintlayout/widget/e$d;->a:Z
+
+    .line 2
+    iget v0, p1, Landroidx/constraintlayout/widget/e$d;->b:I
+
+    iput v0, p0, Landroidx/constraintlayout/widget/e$d;->b:I
+
+    .line 3
+    iget v0, p1, Landroidx/constraintlayout/widget/e$d;->d:F
+
+    iput v0, p0, Landroidx/constraintlayout/widget/e$d;->d:F
+
+    .line 4
+    iget p1, p1, Landroidx/constraintlayout/widget/e$d;->e:F
+
+    iput p1, p0, Landroidx/constraintlayout/widget/e$d;->e:F
+
+    return-void
+.end method
